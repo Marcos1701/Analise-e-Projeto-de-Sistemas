@@ -15,10 +15,10 @@ namespace New_Project_Dotnet.Models
         public int Id {get; set;}
 
         [Display(Name = "Nome")]
-        public String Name {get; set;}
+        public string Name {get; set;}
 
         [Display(Name = "Endereco")]
-        public String Address {get; set;}
+        public string Address {get; set;}
 
         [Display(Name = "Contato")]
         public int Contact {get; set;}

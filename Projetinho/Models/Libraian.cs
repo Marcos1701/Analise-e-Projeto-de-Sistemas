@@ -12,6 +12,9 @@ namespace Projetinho.Models
     public class Libraian
     {
 
+        [Display(Name = "Código")]
+        public int Id {get; set;}
+        
         [Display(Name = "Nome da Livraria")]
         public string Name {get; set;}
 
@@ -25,26 +28,9 @@ namespace Projetinho.Models
 
         public virtual ICollection<Member> Members {get; set;}
 
+        public virtual ICollection<Alert> Alerts {get; set;}
 
-        // void Updateinfo() {
 
-        // }
-
-        // void Issuebooks() {
-            
-        // }
-
-        // void Memberinfo() {
-
-        // }
-
-        // void searchbk() {
-
-        // }
-
-        // void returnbk() {
-
-        // }
         
         // implementando metodos
 
@@ -54,6 +40,7 @@ namespace Projetinho.Models
             Mobileno = mobileno;
             Books = new List<Books>();
             Members = new List<Member>();
+            Alerts = new List<Alert>();
         }
 
         public override string ToString() {

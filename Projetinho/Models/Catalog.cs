@@ -11,17 +11,24 @@ namespace New_Project_Dotnet.Models
     public class Catalog
     {
 
-        [Display(Name = "Nome do Catalogo")]
-        public string Catalogname {get; set;}
+        [Display(Name = "Código")]
+        public int Id {get; set;}
+
+        [Display(Name = "Nome do Autor")]
+        public string Authorname {get; set;}
+
+        [Display(Name = "Quantidade de Copias")]
+        public int Quantitycopies {get; set;}
 
         public virtual ICollection<Books> Books {get; set;}
 
-        public Catalog(string catalogname) {
-            Catalogname = catalogname;
+        public Catalog(string authorname, int quantitycopies) {
+            Authorname = authorname;
+            Quantitycopies = quantitycopies;
             Books = new List<Books>();
         }
 
-        internal void Addbk(Books books)
+        public void Addbk(Books books)
         {
             foreach (Books bk in Books) {
                 if (bk.Bookname == books.Bookname) {
@@ -32,7 +39,7 @@ namespace New_Project_Dotnet.Models
             Books.Add(books);
         }
 
-        internal void Removebk(Books books)
+        public void Removebk(Books books)
         {
             
             foreach (Books bk in Books) {
@@ -44,6 +51,20 @@ namespace New_Project_Dotnet.Models
                     return;
                 }
             }
+        }
+
+        public void Updateinfo(string authorname, int quantitycopies) {
+            Authorname = authorname;
+            Quantitycopies = quantitycopies;
+        }
+
+        public Books? Searchbk(string bookname) {
+            foreach (Books bk in Books) {
+                if (bk.Bookname == bookname) {
+                    return bk;
+                }
+            }
+            return null;
         }
     }
 }

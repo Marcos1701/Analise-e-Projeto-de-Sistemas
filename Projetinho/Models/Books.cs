@@ -10,6 +10,11 @@ namespace New_Project_Dotnet.Models
 {
     public class Books
     {
+
+        [Display(Name = "Código")]
+        public int Id {get; set;}
+
+        
         [Display(Name = "Nome do Autor")]
         public string Authorname {get; set;}
 
