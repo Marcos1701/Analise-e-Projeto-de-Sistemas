@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using New_Project_Dotnet.Models;
 
 namespace Projetinho.Models
 {
@@ -12,13 +13,13 @@ namespace Projetinho.Models
     {
 
         [Display(Name = "Nome da Livraria")]
-        public String Name {get; set;}
+        public string Name {get; set;}
 
         [Display(Name = "Endereco")]
-        public String Address {get; set;}
+        public string Address {get; set;}
 
         [Display(Name = "Contato")]
-        public int mobileno {get; set;} // mobileno = mobile number
+        public int Mobileno {get; set;} // mobileno = mobile number
 
         public virtual ICollection<Books> Books {get; set;}
 
@@ -46,44 +47,29 @@ namespace Projetinho.Models
         // }
         
         // implementando metodos
-        public Libraian() {
-            Books = new HashSet<Books>();
-            Members = new HashSet<Member>();
-        }
 
         public Libraian(string name, string address, int mobileno) {
             Name = name;
             Address = address;
-            this.mobileno = mobileno;
+            Mobileno = mobileno;
+            Books = new List<Books>();
+            Members = new List<Member>();
         }
 
         public override string ToString() {
-            return "Nome da Livraria: " + Name + "\nEndereco: " + Address + "\nContato: " + mobileno;
-        }
-
-        public override bool Equals(object obj) {
-            if (obj == null) {
-                return false;
-            }
-            Libraian objAsLibraian = obj as Libraian;
-            if (objAsLibraian == null) {
-                return false;
-            }
-            else {
-                return Equals(objAsLibraian);
-            }
+            return "Nome da Livraria: " + Name + "\nEndereco: " + Address + "\nContato: " + Mobileno;
         }
 
         // update info = atualizar informacao
         public void Updateinfo(string name, string address, int mobileno) {
             Name = name;
             Address = address;
-            this.mobileno = mobileno;
+            Mobileno = mobileno;
         }
 
         // issue books = emprestar livros
         public void Issuebooks(String bookname, Member member) {
-            Books book = searchbk(bookname);
+            Books? book = Searchbk(bookname);
 
             if(book == null) {
                 Console.WriteLine("Livro nao encontrado");
@@ -105,7 +91,7 @@ namespace Projetinho.Models
         }
 
         // search bk = procurar livro
-        public Books searchbk(string bookname) {
+        public Books? Searchbk(string bookname) {
             foreach (Books book in Books) {
                 if (book.Bookname == bookname) {
                     return book;
@@ -116,7 +102,7 @@ namespace Projetinho.Models
         }
 
         // return bk = devolver livro
-        public void returnbk(Books book, Member member) {
+        public void Returnbk(Books book, Member member) {
             if (member.Books.Contains(book)) {
                 book.Bookquantity++;
                 member.Books.Remove(book);
@@ -126,5 +112,7 @@ namespace Projetinho.Models
             Console.WriteLine("Livro nao encontrado");
             
         }
+
+
     }
 }

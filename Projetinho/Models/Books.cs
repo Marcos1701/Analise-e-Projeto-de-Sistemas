@@ -11,19 +11,41 @@ namespace New_Project_Dotnet.Models
     public class Books
     {
         [Display(Name = "Nome do Autor")]
-        String Authorname;
+        public string Authorname {get; set;}
 
         [Display(Name = "Nome do Livro")]
-        String Bookname;
+        public string Bookname {get; set;}
 
         [Display(Name = "Quantidade de Livros")]
-        int Bookquantity;
+        public int Bookquantity {get; set;}
 
-        void removefirmcatalog() {
+        public virtual Catalog Catalog {get; set;}
 
+        public Books(string authorname, string bookname, int bookquantity, Catalog catalog) {
+            Authorname = authorname;
+            Bookname = bookname;
+            Bookquantity = bookquantity;
+            Catalog = catalog;
         }
-        void addtocatalog() {
-            
+
+        public override string ToString() {
+            return "Nome do Autor: " + Authorname + "\nNome do Livro: " + Bookname + "\nQuantidade de Livros: " + Bookquantity;
+        }
+        
+        public void Addbk() {
+            Catalog.Addbk(this);
+        }
+
+        public void Removebk() {
+            Catalog.Removebk(this);
+        }
+
+        public void Addexemplebk(int quantity) { // exemplebk = exemplar de livro
+            Bookquantity += quantity;
+        }
+
+        public void Removeexemplebk(int quantity) {
+            Bookquantity -= quantity;
         }
     }
 }
