@@ -4,8 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Projetinho.Models;
-namespace New_Project_Dotnet.Models
+
+
+namespace Projetinho.Models
 
 {
     public class Member
@@ -14,23 +15,29 @@ namespace New_Project_Dotnet.Models
         [Display(Name = "Código")]
         public int Id {get; set;}
 
+        [Required]
         [Display(Name = "Nome")]
-        public string Name {get; set;}
+        public string? Name {get; set;}
 
+        [Required]
         [Display(Name = "Endereco")]
-        public string Address {get; set;}
+        public string? Address {get; set;}
 
+        [Required]
         [Display(Name = "Contato")]
         public int Contact {get; set;}
 
-        public virtual Libraian Libraian {get; set;}
-        public virtual ICollection<Books> Books {get; set;}
+        public virtual Libraian? Libraian {get; set;}
+        public virtual ICollection<Books>? Books {get; set;}
+
+        public Member() {
+            Books = new List<Books>();
+        }
 
         public Member(string name, string address, int contact , Libraian libraian) {
             Name = name;
             Address = address;
             Contact = contact;
-            Books = new List<Books>();
             Libraian = libraian;
         }
 

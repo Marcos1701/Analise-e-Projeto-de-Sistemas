@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace New_Project_Dotnet.Models
+namespace Projetinho.Models
 {
     public class Catalog
     {

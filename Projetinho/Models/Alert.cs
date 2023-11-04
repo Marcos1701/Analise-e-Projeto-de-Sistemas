@@ -14,8 +14,9 @@ namespace Projetinho.Models
         [Display(Name = "Data de Emissão")]
         public DateTime IssueDate {get; set;}
 
+        [Required]
         [Display(Name = "Nome do Livro")]
-        public string BookName {get; set;}
+        public string? BookName {get; set;}
 
         [Display(Name = "Data de Retorno")]
         public DateTime ReturnDate {get; set;}
@@ -26,16 +27,21 @@ namespace Projetinho.Models
         [Display(Name = "Status")]
         public bool IsActivated { get; set; }
 
-        public virtual Libraian Libraian {get; set;}
+        [Required]
+        public virtual Libraian? Libraian {get; set;}
 
-        public Alert(Libraian libraian, string bookname, DateTime returndate)
+        public Alert()
         {
             IsActivated = false;
             IssueDate = DateTime.Now;
+            Fine = 100;
+        }
+
+        public Alert(Libraian libraian, string bookname, DateTime returndate)
+        {
             Libraian = libraian;
             BookName = bookname;
             ReturnDate = returndate;
-            Fine = 100;
         }
 
         public void Finecall()

@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using New_Project_Dotnet.Models;
 
 namespace Projetinho.Models
 {
@@ -15,32 +14,34 @@ namespace Projetinho.Models
         [Display(Name = "Código")]
         public int Id {get; set;}
         
+        [Required(ErrorMessage = "Nome da Livraria é obrigatório")]
         [Display(Name = "Nome da Livraria")]
-        public string Name {get; set;}
+        public string? Name {get; set;}
 
+        [Required(ErrorMessage = "Endereco é obrigatório")]
         [Display(Name = "Endereco")]
-        public string Address {get; set;}
+        public string? Address {get; set;}
 
+        [Required(ErrorMessage = "Contato é obrigatório")]
         [Display(Name = "Contato")]
         public int Mobileno {get; set;} // mobileno = mobile number
 
-        public virtual ICollection<Books> Books {get; set;}
-
-        public virtual ICollection<Member> Members {get; set;}
-
-        public virtual ICollection<Alert> Alerts {get; set;}
-
-
+        public virtual ICollection<Books>? Books {get; set;}
+        public virtual ICollection<Member>? Members {get; set;}
+        public virtual ICollection<Alert>? Alerts {get; set;}
         
         // implementando metodos
+
+        public Libraian() {
+            Books = new List<Books>();
+            Members = new List<Member>();
+            Alerts = new List<Alert>();
+        }
 
         public Libraian(string name, string address, int mobileno) {
             Name = name;
             Address = address;
             Mobileno = mobileno;
-            Books = new List<Books>();
-            Members = new List<Member>();
-            Alerts = new List<Alert>();
         }
 
         public override string ToString() {
