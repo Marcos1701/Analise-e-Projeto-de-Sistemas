@@ -14,18 +14,22 @@ namespace Projetinho.Models
         [Display(Name = "Código")]
         public int Id {get; set;}
 
+        [Required(ErrorMessage = "Nome do Autor é obrigatório")]
         [Display(Name = "Nome do Autor")]
         public string Authorname {get; set;}
 
         [Display(Name = "Quantidade de Copias")]
-        public int Quantitycopies {get; set;}
+        public int? Quantitycopies {get; set;}
 
         public virtual ICollection<Books> Books {get; set;}
+
+        public Catalog() {
+            Books = new List<Books>();
+        }
 
         public Catalog(string authorname, int quantitycopies) {
             Authorname = authorname;
             Quantitycopies = quantitycopies;
-            Books = new List<Books>();
         }
 
         public void Addbk(Books books)

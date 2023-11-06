@@ -18,8 +18,8 @@ namespace Projetinho.Models
         [Display(Name = "Nome da Livraria")]
         public string? Name {get; set;}
 
-        [Required(ErrorMessage = "Endereco é obrigatório")]
-        [Display(Name = "Endereco")]
+        [Required(ErrorMessage = "Endereço é obrigatório")]
+        [Display(Name = "Endereço")]
         public string? Address {get; set;}
 
         [Required(ErrorMessage = "Contato é obrigatório")]
@@ -44,7 +44,7 @@ namespace Projetinho.Models
             Mobileno = mobileno;
         }
 
-        public override string ToString() {
+        /*public override string ToString() {
             return "Nome da Livraria: " + Name + "\nEndereco: " + Address + "\nContato: " + Mobileno;
         }
 
@@ -56,20 +56,17 @@ namespace Projetinho.Models
         }
 
         // issue books = emprestar livros
-        public void Issuebooks(String bookname, Member member) {
+        public void Issuebooks(string bookname, Member member) {
             Books? book = Searchbk(bookname);
 
             if(book == null) {
                 Console.WriteLine("Livro nao encontrado");
-                return;
             }
 
             if (book.Bookquantity > 0) {
                 book.Bookquantity--;
                 member.Books.Add(book);
-                return;
             }
-            
             Console.WriteLine("Livro nao disponivel");
         }
 
@@ -94,13 +91,8 @@ namespace Projetinho.Models
             if (member.Books.Contains(book)) {
                 book.Bookquantity++;
                 member.Books.Remove(book);
-                return;
             }
-            
             Console.WriteLine("Livro nao encontrado");
-            
-        }
-
-
+        }*/
     }
 }

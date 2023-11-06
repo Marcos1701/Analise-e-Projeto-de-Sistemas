@@ -19,6 +19,21 @@ namespace Projetinho.Migrations
                 .HasAnnotation("ProductVersion", "6.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("LibraianMember", b =>
+                {
+                    b.Property<int>("LibraiansId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MembersId")
+                        .HasColumnType("int");
+
+                    b.HasKey("LibraiansId", "MembersId");
+
+                    b.HasIndex("MembersId");
+
+                    b.ToTable("LibraianMember");
+                });
+
             modelBuilder.Entity("Projetinho.Models.Alert", b =>
                 {
                     b.Property<int>("Id")
@@ -29,16 +44,13 @@ namespace Projetinho.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("Fine")
+                    b.Property<int?>("Fine")
                         .HasColumnType("int");
-
-                    b.Property<bool>("IsActivated")
-                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime>("IssueDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int>("LibraianId")
+                    b.Property<int?>("LibraianId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("ReturnDate")
@@ -75,10 +87,7 @@ namespace Projetinho.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int?>("LibraianId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("MemberId")
+                    b.Property<int>("LibraianId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -86,8 +95,6 @@ namespace Projetinho.Migrations
                     b.HasIndex("CatalogId");
 
                     b.HasIndex("LibraianId");
-
-                    b.HasIndex("MemberId");
 
                     b.ToTable("Books");
 
@@ -104,7 +111,7 @@ namespace Projetinho.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("Quantitycopies")
+                    b.Property<int?>("Quantitycopies")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -141,7 +148,6 @@ namespace Projetinho.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<int>("Contact")
@@ -151,16 +157,11 @@ namespace Projetinho.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("LibraianId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("LibraianId");
 
                     b.ToTable("Members");
 
@@ -172,7 +173,6 @@ namespace Projetinho.Migrations
                     b.HasBaseType("Projetinho.Models.Member");
 
                     b.Property<string>("Facultycoll")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasDiscriminator().HasValue("FacultyMember");
@@ -181,6 +181,11 @@ namespace Projetinho.Migrations
             modelBuilder.Entity("Projetinho.Models.GeneralBook", b =>
                 {
                     b.HasBaseType("Projetinho.Models.Books");
+
+                    b.Property<int?>("MemberId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("MemberId");
 
                     b.HasDiscriminator().HasValue("GeneralBook");
                 });
@@ -192,13 +197,37 @@ namespace Projetinho.Migrations
                     b.HasDiscriminator().HasValue("ReferenceBook");
                 });
 
+            modelBuilder.Entity("Projetinho.Models.Student", b =>
+                {
+                    b.HasBaseType("Projetinho.Models.Member");
+
+                    b.Property<string>("Studentcoll")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasDiscriminator().HasValue("Student");
+                });
+
+            modelBuilder.Entity("LibraianMember", b =>
+                {
+                    b.HasOne("Projetinho.Models.Libraian", null)
+                        .WithMany()
+                        .HasForeignKey("LibraiansId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Projetinho.Models.Member", null)
+                        .WithMany()
+                        .HasForeignKey("MembersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Projetinho.Models.Alert", b =>
                 {
                     b.HasOne("Projetinho.Models.Libraian", "Libraian")
                         .WithMany("Alerts")
-                        .HasForeignKey("LibraianId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("LibraianId");
 
                     b.Navigation("Libraian");
                 });
@@ -211,26 +240,24 @@ namespace Projetinho.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Projetinho.Models.Libraian", null)
-                        .WithMany("Books")
-                        .HasForeignKey("LibraianId");
-
-                    b.HasOne("Projetinho.Models.Member", null)
-                        .WithMany("Books")
-                        .HasForeignKey("MemberId");
-
-                    b.Navigation("Catalog");
-                });
-
-            modelBuilder.Entity("Projetinho.Models.Member", b =>
-                {
                     b.HasOne("Projetinho.Models.Libraian", "Libraian")
-                        .WithMany("Members")
+                        .WithMany("Books")
                         .HasForeignKey("LibraianId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Catalog");
+
                     b.Navigation("Libraian");
+                });
+
+            modelBuilder.Entity("Projetinho.Models.GeneralBook", b =>
+                {
+                    b.HasOne("Projetinho.Models.Member", "Member")
+                        .WithMany("GeneralBooks")
+                        .HasForeignKey("MemberId");
+
+                    b.Navigation("Member");
                 });
 
             modelBuilder.Entity("Projetinho.Models.Catalog", b =>
@@ -243,13 +270,11 @@ namespace Projetinho.Migrations
                     b.Navigation("Alerts");
 
                     b.Navigation("Books");
-
-                    b.Navigation("Members");
                 });
 
             modelBuilder.Entity("Projetinho.Models.Member", b =>
                 {
-                    b.Navigation("Books");
+                    b.Navigation("GeneralBooks");
                 });
 #pragma warning restore 612, 618
         }

@@ -9903,25 +9903,24 @@
     ]
   },
   "packageFolders": {
-    "/home/codespace/.nuget/packages/": {}
+    "C:\\Users\\JRIC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspaces/Analise-e-Projeto-de-Sistemas/Projetinho/Projetinho.csproj",
+      "projectUniqueName": "E:\\Documentos\\Igor\\2023\\PROJETO_DE_SISTEMAS\\Biblioteca_dotnet\\Analise-e-Projeto-de-Sistemas\\Projetinho\\Projetinho.csproj",
       "projectName": "Projetinho",
-      "projectPath": "/workspaces/Analise-e-Projeto-de-Sistemas/Projetinho/Projetinho.csproj",
-      "packagesPath": "/home/codespace/.nuget/packages/",
-      "outputPath": "/workspaces/Analise-e-Projeto-de-Sistemas/Projetinho/obj/",
+      "projectPath": "E:\\Documentos\\Igor\\2023\\PROJETO_DE_SISTEMAS\\Biblioteca_dotnet\\Analise-e-Projeto-de-Sistemas\\Projetinho\\Projetinho.csproj",
+      "packagesPath": "C:\\Users\\JRIC\\.nuget\\packages\\",
+      "outputPath": "E:\\Documentos\\Igor\\2023\\PROJETO_DE_SISTEMAS\\Biblioteca_dotnet\\Analise-e-Projeto-de-Sistemas\\Projetinho\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/codespace/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\JRIC\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "/usr/local/dotnet/7.0.306/sdk/7.0.306/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9988,20 +9987,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.20, 6.0.20]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[6.0.20, 6.0.20]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.20, 6.0.20]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -10010,7 +9995,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/dotnet/7.0.306/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.416\\RuntimeIdentifierGraph.json"
       }
     }
   }

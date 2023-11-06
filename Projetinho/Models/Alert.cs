@@ -1,56 +1,60 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Projetinho.Models
 {
     public class Alert
     {
+        
         [Display(Name = "Código")]
         public int Id {get; set;}
 
+        [Required(ErrorMessage = "Data de Emissão é obrigatória")]
         [Display(Name = "Data de Emissão")]
+        [DataType(DataType.Date)]
         public DateTime IssueDate {get; set;}
 
-        [Required]
-        [Display(Name = "Nome do Livro")]
-        public string? BookName {get; set;}
+        [Required(ErrorMessage = "Título do livro é obrigatório")]
+        [Display(Name = "Título do livro")]
+        public string BookName {get; set;}
 
         [Display(Name = "Data de Retorno")]
-        public DateTime ReturnDate {get; set;}
+        [DataType(DataType.Date)]
+        public DateTime? ReturnDate {get; set;}
 
         [Display(Name = "Multa")]
-        public int Fine {get; set;}
+        public int? Fine {get; set;}
 
         [Display(Name = "Status")]
-        public bool IsActivated { get; set; }
+        public bool IsActivated = false;
 
-        [Required]
         public virtual Libraian? Libraian {get; set;}
 
         public Alert()
         {
-            IsActivated = false;
             IssueDate = DateTime.Now;
+            ReturnDate = IssueDate.AddDays(15);
             Fine = 100;
         }
 
-        public Alert(Libraian libraian, string bookname, DateTime returndate)
+        public Alert(Libraian libraian, string bookname)
         {
             Libraian = libraian;
             BookName = bookname;
-            ReturnDate = returndate;
         }
 
         public void Finecall()
         {
-            int daysOverdue = (int)(DateTime.Now - ReturnDate).TotalDays;
+            int daysOverdue = (int)(DateTime.Now - ReturnDate.Value).TotalDays;
 
             if (daysOverdue > 0)
             {
-                Fine = daysOverdue * 3; // R$3,00
+                Fine = daysOverdue * Fine;
             }
         }
 

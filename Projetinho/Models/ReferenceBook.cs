@@ -7,13 +7,14 @@ namespace Projetinho.Models
 {
     public class ReferenceBook : Books
     {
-
         public ReferenceBook() {}
-        public ReferenceBook(string authorname, string bookname, int bookquantity, Catalog catalog) : base(authorname, bookname, bookquantity, catalog) {
+
+        public ReferenceBook(string authorname, string bookname, int bookquantity, Catalog catalog, Libraian libraian) : base(authorname, bookname, bookquantity, catalog, libraian) {
             Authorname = authorname;
             Bookname = bookname;
             Bookquantity = bookquantity;
             Catalog = catalog;
+            Libraian = libraian;
         }
 
         public Books? Searchrefbk(string bookname) {

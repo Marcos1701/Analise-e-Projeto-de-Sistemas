@@ -16,15 +16,15 @@ namespace Projetinho.Models
         public string? Studentcoll {get; set;} // studentcoll = student college
 
         public Student() {
-            Books = new List<Books>();
+            GeneralBooks = new List<GeneralBook>();
+            Libraians = new List<Libraian>();
         }
 
-        public Student(string name, string address, int contact, Libraian libraian, string studentcoll) : base(name, address, contact, libraian)
+        public Student(string name, string address, int contact, string studentcoll) : base(name, address, contact)
         {
             Name = name;
             Address = address;
             Contact = contact;
-            Libraian = libraian;
             Studentcoll = studentcoll;
         }
     }

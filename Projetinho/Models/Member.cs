@@ -2,12 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 namespace Projetinho.Models
-
 {
     public class Member
     {
@@ -15,34 +14,34 @@ namespace Projetinho.Models
         [Display(Name = "Código")]
         public int Id {get; set;}
 
-        [Required]
+        [Required(ErrorMessage = "Nome do Membro é obrigatório")]
         [Display(Name = "Nome")]
         public string? Name {get; set;}
 
-        [Required]
-        [Display(Name = "Endereco")]
+        [Display(Name = "Endereço")]
         public string? Address {get; set;}
 
-        [Required]
+        [Required(ErrorMessage = "Número de Contato é obrigatório")]
         [Display(Name = "Contato")]
         public int Contact {get; set;}
 
-        public virtual Libraian? Libraian {get; set;}
-        public virtual ICollection<Books>? Books {get; set;}
+        public virtual ICollection<GeneralBook>? GeneralBooks {get; set;}
+
+        public virtual ICollection<Libraian>? Libraians {get; set;}
 
         public Member() {
-            Books = new List<Books>();
+            GeneralBooks = new List<GeneralBook>();
+            Libraians = new List<Libraian>();
         }
 
-        public Member(string name, string address, int contact , Libraian libraian) {
+        public Member(string name, string address, int contact) {
             Name = name;
             Address = address;
             Contact = contact;
-            Libraian = libraian;
         }
 
         // request for book = solicitar livro
-        void Requestforbk(String bookname){
+        /*void Requestforbk(String bookname){
             Libraian.Issuebooks(bookname, this);
         }
 
@@ -50,6 +49,6 @@ namespace Projetinho.Models
 
         void Returnbk(Books book){
             Libraian.Returnbk(book, this);
-        }
+        }*/
     }
 }
