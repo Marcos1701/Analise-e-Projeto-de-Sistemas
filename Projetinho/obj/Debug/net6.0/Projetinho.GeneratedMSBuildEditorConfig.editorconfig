@@ -8,177 +8,177 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Projetinho
 build_property.RootNamespace = Projetinho
-build_property.ProjectDir = e:\Documentos\Igor\2023\PROJETO_DE_SISTEMAS\Biblioteca_dotnet\Analise-e-Projeto-de-Sistemas\Projetinho\
+build_property.ProjectDir = C:\Users\marco\OneDrive - MSFT\Desktop\Arq\Modulo_4\Analise-e-Projeto-de-Sistemas\Projetinho\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = e:\Documentos\Igor\2023\PROJETO_DE_SISTEMAS\Biblioteca_dotnet\Analise-e-Projeto-de-Sistemas\Projetinho
+build_property.MSBuildProjectDirectory = C:\Users\marco\OneDrive - MSFT\Desktop\Arq\Modulo_4\Analise-e-Projeto-de-Sistemas\Projetinho
 build_property._RazorSourceGeneratorDebug = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Alerts/Create.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Alerts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxlcnRzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Alerts/Delete.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Alerts/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxlcnRzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Alerts/Details.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Alerts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxlcnRzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Alerts/Edit.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Alerts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxlcnRzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Alerts/Index.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Alerts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxlcnRzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Catalogs/Create.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Catalogs/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Catalogs/Delete.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Catalogs/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Catalogs/Details.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Catalogs/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Catalogs/Edit.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Catalogs/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Catalogs/Index.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Catalogs/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/FacultyMembers/Create.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/FacultyMembers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eU1lbWJlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/FacultyMembers/Delete.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/FacultyMembers/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eU1lbWJlcnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/FacultyMembers/Details.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/FacultyMembers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eU1lbWJlcnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/FacultyMembers/Edit.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/FacultyMembers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eU1lbWJlcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/FacultyMembers/Index.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/FacultyMembers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eU1lbWJlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/GeneralBooks/Create.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/GeneralBooks/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbEJvb2tzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/GeneralBooks/Delete.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/GeneralBooks/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbEJvb2tzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/GeneralBooks/Details.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/GeneralBooks/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbEJvb2tzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/GeneralBooks/Edit.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/GeneralBooks/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbEJvb2tzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/GeneralBooks/Index.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/GeneralBooks/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbEJvb2tzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Home/Index.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Home/Privacy.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Libraians/Create.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Libraians/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFpYW5zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Libraians/Delete.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Libraians/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFpYW5zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Libraians/Details.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Libraians/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFpYW5zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Libraians/Edit.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Libraians/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFpYW5zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Libraians/Index.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Libraians/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFpYW5zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/ReferenceBooks/Create.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/ReferenceBooks/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVmZXJlbmNlQm9va3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/ReferenceBooks/Delete.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/ReferenceBooks/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVmZXJlbmNlQm9va3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/ReferenceBooks/Details.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/ReferenceBooks/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVmZXJlbmNlQm9va3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/ReferenceBooks/Edit.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/ReferenceBooks/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVmZXJlbmNlQm9va3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/ReferenceBooks/Index.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/ReferenceBooks/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVmZXJlbmNlQm9va3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Shared/Error.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Students/Create.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Students/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Students/Delete.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Students/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Students/Details.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Students/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Students/Edit.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Students/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Students/Index.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Students/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/_ViewImports.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/_ViewStart.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/Documentos/Igor/2023/PROJETO_DE_SISTEMAS/Biblioteca_dotnet/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Shared/_Layout.cshtml]
+[C:/Users/marco/OneDrive - MSFT/Desktop/Arq/Modulo_4/Analise-e-Projeto-de-Sistemas/Projetinho/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-e40ma40a7w
