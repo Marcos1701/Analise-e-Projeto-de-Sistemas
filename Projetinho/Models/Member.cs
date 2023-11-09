@@ -15,6 +15,7 @@ namespace Projetinho.Models
         public int Id {get; set;}
 
         [Required(ErrorMessage = "Nome do Membro é obrigatório")]
+        [StringLength(30, ErrorMessage = "O Nome não pode ter mais de 30 caracteres.")]
         [Display(Name = "Nome")]
         public string? Name {get; set;}
 
@@ -26,8 +27,9 @@ namespace Projetinho.Models
         public int Contact {get; set;}
 
         public virtual ICollection<GeneralBook>? GeneralBooks {get; set;}
-
         public virtual ICollection<Libraian>? Libraians {get; set;}
+
+        public virtual Libraian? Libraian {get; set;}
 
         public Member() {
             GeneralBooks = new List<GeneralBook>();
@@ -41,14 +43,14 @@ namespace Projetinho.Models
         }
 
         // request for book = solicitar livro
-        /*void Requestforbk(String bookname){
+        public void Requestforbk(string bookname){
             Libraian.Issuebooks(bookname, this);
         }
 
         // return book = retornar livro
 
-        void Returnbk(Books book){
+        public void Returnbk(Books book){
             Libraian.Returnbk(book, this);
-        }*/
+        }
     }
 }

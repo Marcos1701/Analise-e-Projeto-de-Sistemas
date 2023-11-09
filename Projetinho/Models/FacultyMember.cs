@@ -10,24 +10,14 @@ namespace Projetinho.Models
 {
     public class FacultyMember : Member
     {
-
+        [Required(ErrorMessage = "Nome da Faculdade é obrigatório.")]
         [Display(Name = "Nome da Faculdade")]
         public string? Facultycoll {get; set;}
 
-        public FacultyMember() {
-            GeneralBooks = new List<GeneralBook>();
-            Libraians = new List<Libraian>();
-        }
+        public FacultyMember() {}
 
-        public FacultyMember(string name, string address, int contact, string facultycoll) : base( name,  address, contact) {
-            Name = name;
-            Address = address;
-            Contact = contact;
+        public FacultyMember(string name, string address, int contact, string facultycoll) : base(name,  address, contact) {
             Facultycoll = facultycoll;
-        }
-
-        void checkoutbk(){
-
         }
     }
 }

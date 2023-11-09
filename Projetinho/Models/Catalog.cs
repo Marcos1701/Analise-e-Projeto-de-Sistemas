@@ -15,6 +15,7 @@ namespace Projetinho.Models
         public int Id {get; set;}
 
         [Required(ErrorMessage = "Nome do Autor é obrigatório")]
+        [StringLength(30, ErrorMessage = "O Nome não pode ter mais de 30 caracteres.")]
         [Display(Name = "Nome do Autor")]
         public string Authorname {get; set;}
 

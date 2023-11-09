@@ -15,26 +15,29 @@ namespace Projetinho.Models
         public int Id {get; set;}
         
         [Required(ErrorMessage = "Nome do Autor é obrigatório")]
+        [StringLength(30, ErrorMessage = "O Nome não pode ter mais de 30 caracteres.")]
         [Display(Name = "Nome do Autor")]
         public string? Authorname {get; set;}
 
         [Required(ErrorMessage = "Título do livro é obrigatório")]
         [Display(Name = "Título do Livro")]
-        public string? Bookname {get; set;}
+        public string Bookname {get; set;}
 
         [Display(Name = "Quantidade de Livros")]
         public int Bookquantity {get; set;}
 
         [Required]
         [ForeignKey("CatalogId")]
-        public int CatalogId {get; set;}
+        [Display(Name = "Catálogo")]
+        public int? CatalogId {get; set;}
 
         [Display(Name = "Catálogo")]
         public virtual Catalog? Catalog {get; set;}
 
         [Required]
         [ForeignKey("LibraianId")]
-        public int LibraianId {get; set;}
+        [Display(Name = "Bibliotecário")]
+        public int? LibraianId {get; set;}
 
         [Display(Name = "Bibliotecário")]
         public virtual Libraian? Libraian {get; set;}

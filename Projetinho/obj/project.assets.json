@@ -9903,19 +9903,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\marco\\.nuget\\packages\\": {}
+    "C:\\Users\\JRIC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marco\\OneDrive - MSFT\\Desktop\\Arq\\Modulo_4\\Analise-e-Projeto-de-Sistemas\\Projetinho\\Projetinho.csproj",
+      "projectUniqueName": "E:\\Documentos\\Igor\\2023\\PROJETO_DE_SISTEMAS\\Biblioteca_dotnet\\Analise-e-Projeto-de-Sistemas\\Projetinho\\Projetinho.csproj",
       "projectName": "Projetinho",
-      "projectPath": "C:\\Users\\marco\\OneDrive - MSFT\\Desktop\\Arq\\Modulo_4\\Analise-e-Projeto-de-Sistemas\\Projetinho\\Projetinho.csproj",
-      "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marco\\OneDrive - MSFT\\Desktop\\Arq\\Modulo_4\\Analise-e-Projeto-de-Sistemas\\Projetinho\\obj\\",
+      "projectPath": "E:\\Documentos\\Igor\\2023\\PROJETO_DE_SISTEMAS\\Biblioteca_dotnet\\Analise-e-Projeto-de-Sistemas\\Projetinho\\Projetinho.csproj",
+      "packagesPath": "C:\\Users\\JRIC\\.nuget\\packages\\",
+      "outputPath": "E:\\Documentos\\Igor\\2023\\PROJETO_DE_SISTEMAS\\Biblioteca_dotnet\\Analise-e-Projeto-de-Sistemas\\Projetinho\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\marco\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\JRIC\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"

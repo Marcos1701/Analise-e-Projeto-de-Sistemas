@@ -15,6 +15,7 @@ namespace Projetinho.Models
 
         public DbSet<Member> Members {get; set;} = null!;
         public DbSet<Libraian> Libraians {get; set;} = null!;
+        public DbSet<LibraianMember> LibraianMembers {get; set;} = null!;
         public DbSet<Books> Books {get; set;} = null!;
         public DbSet<Catalog> Catalogs {get; set;} = null!;
         public DbSet<FacultyMember> FacultyMembers {get; set;} = null!;
@@ -27,7 +28,16 @@ namespace Projetinho.Models
         {
             modelBuilder.Entity<Member>()
                 .HasMany(m => m.Libraians)
-                .WithMany(l => l.Members);
+                .WithMany(l => l.Members)
+                .UsingEntity<LibraianMember>(
+                    j => j
+                        .HasOne(lm => lm.Libraian)
+                        .WithMany()
+                        .HasForeignKey(lm => lm.LibraianId),
+                    j => j
+                        .HasOne(lm => lm.Member)
+                        .WithMany()
+                        .HasForeignKey(lm => lm.MemberId));
 
             modelBuilder.Entity<Member>()
                 .HasMany(m => m.GeneralBooks)
@@ -40,6 +50,14 @@ namespace Projetinho.Models
             modelBuilder.Entity<Libraian>()
                 .HasMany(l => l.Books)
                 .WithOne(b => b.Libraian);
+
+            modelBuilder.Entity<FacultyMember>()
+                .HasOne(fm => fm.Libraian)
+                .WithMany();
+            
+            modelBuilder.Entity<Student>()
+                .HasOne(fm => fm.Libraian)
+                .WithMany();
         }
     }
 }

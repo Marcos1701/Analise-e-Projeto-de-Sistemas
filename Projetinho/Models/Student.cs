@@ -10,21 +10,14 @@ namespace Projetinho.Models
 {
     public class Student : Member
     {
-
-        [Required]
+        [Required(ErrorMessage = "Nome da Faculdade é obrigatório.")]
         [Display(Name = "Nome da Faculdade")]
         public string? Studentcoll {get; set;} // studentcoll = student college
 
-        public Student() {
-            GeneralBooks = new List<GeneralBook>();
-            Libraians = new List<Libraian>();
-        }
+        public Student() {}
 
         public Student(string name, string address, int contact, string studentcoll) : base(name, address, contact)
         {
-            Name = name;
-            Address = address;
-            Contact = contact;
             Studentcoll = studentcoll;
         }
     }

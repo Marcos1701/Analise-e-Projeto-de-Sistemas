@@ -23,6 +23,7 @@ namespace Projetinho.Models
         [Display(Name = "Título do livro")]
         public string BookName {get; set;}
 
+        [Required(ErrorMessage = "Data de Retorno é obrigatória")]
         [Display(Name = "Data de Retorno")]
         [DataType(DataType.Date)]
         public DateTime? ReturnDate {get; set;}

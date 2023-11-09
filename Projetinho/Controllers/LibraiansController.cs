@@ -164,8 +164,11 @@ namespace Projetinho.Controllers
 
         private bool valuesExists(string name, string address, int? id)
         {
-            bool values = _context.Libraians.Any(
-                libraian => libraian.Name == name && libraian.Address == address && libraian.Id != id);
+            bool values = _context.Libraians.Any(libraian => 
+                libraian.Name == name && 
+                libraian.Address == address && 
+                libraian.Id != id);
+
             return values;
         }
     }

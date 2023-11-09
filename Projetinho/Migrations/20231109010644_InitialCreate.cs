@@ -19,7 +19,7 @@ namespace Projetinho.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Authorname = table.Column<string>(type: "longtext", nullable: false)
+                    Authorname = table.Column<string>(type: "varchar(30)", maxLength: 30, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Quantitycopies = table.Column<int>(type: "int", nullable: true)
                 },
@@ -35,7 +35,7 @@ namespace Projetinho.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(type: "longtext", nullable: false)
+                    Name = table.Column<string>(type: "varchar(30)", maxLength: 30, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Address = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -44,30 +44,6 @@ namespace Projetinho.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Libraians", x => x.Id);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "Members",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Address = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Contact = table.Column<int>(type: "int", nullable: false),
-                    Discriminator = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Facultycoll = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Studentcoll = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4")
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Members", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -96,12 +72,48 @@ namespace Projetinho.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "Members",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(type: "varchar(30)", maxLength: 30, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Address = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Contact = table.Column<int>(type: "int", nullable: false),
+                    Discriminator = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Facultycoll = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    LibraianId = table.Column<int>(type: "int", nullable: true),
+                    Studentcoll = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Student_LibraianId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Members", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Members_Libraians_LibraianId",
+                        column: x => x.LibraianId,
+                        principalTable: "Libraians",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Members_Libraians_Student_LibraianId",
+                        column: x => x.Student_LibraianId,
+                        principalTable: "Libraians",
+                        principalColumn: "Id");
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Books",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Authorname = table.Column<string>(type: "longtext", nullable: false)
+                    Authorname = table.Column<string>(type: "varchar(30)", maxLength: 30, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Bookname = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -136,24 +148,26 @@ namespace Projetinho.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "LibraianMember",
+                name: "LibraianMembers",
                 columns: table => new
                 {
-                    LibraiansId = table.Column<int>(type: "int", nullable: false),
-                    MembersId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    LibraianId = table.Column<int>(type: "int", nullable: false),
+                    MemberId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_LibraianMember", x => new { x.LibraiansId, x.MembersId });
+                    table.PrimaryKey("PK_LibraianMembers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_LibraianMember_Libraians_LibraiansId",
-                        column: x => x.LibraiansId,
+                        name: "FK_LibraianMembers_Libraians_LibraianId",
+                        column: x => x.LibraianId,
                         principalTable: "Libraians",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_LibraianMember_Members_MembersId",
-                        column: x => x.MembersId,
+                        name: "FK_LibraianMembers_Members_MemberId",
+                        column: x => x.MemberId,
                         principalTable: "Members",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -181,9 +195,24 @@ namespace Projetinho.Migrations
                 column: "MemberId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_LibraianMember_MembersId",
-                table: "LibraianMember",
-                column: "MembersId");
+                name: "IX_LibraianMembers_LibraianId",
+                table: "LibraianMembers",
+                column: "LibraianId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_LibraianMembers_MemberId",
+                table: "LibraianMembers",
+                column: "MemberId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Members_LibraianId",
+                table: "Members",
+                column: "LibraianId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Members_Student_LibraianId",
+                table: "Members",
+                column: "Student_LibraianId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -195,16 +224,16 @@ namespace Projetinho.Migrations
                 name: "Books");
 
             migrationBuilder.DropTable(
-                name: "LibraianMember");
+                name: "LibraianMembers");
 
             migrationBuilder.DropTable(
                 name: "Catalogs");
 
             migrationBuilder.DropTable(
-                name: "Libraians");
+                name: "Members");
 
             migrationBuilder.DropTable(
-                name: "Members");
+                name: "Libraians");
         }
     }
 }

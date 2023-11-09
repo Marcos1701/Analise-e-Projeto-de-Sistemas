@@ -15,6 +15,7 @@ namespace Projetinho.Models
         public int Id {get; set;}
         
         [Required(ErrorMessage = "Nome da Livraria é obrigatório")]
+        [StringLength(30, ErrorMessage = "O Nome não pode ter mais de 30 caracteres.")]
         [Display(Name = "Nome da Livraria")]
         public string? Name {get; set;}
 
@@ -22,7 +23,7 @@ namespace Projetinho.Models
         [Display(Name = "Endereço")]
         public string? Address {get; set;}
 
-        [Required(ErrorMessage = "Contato é obrigatório")]
+        [Required(ErrorMessage = "Número do Contato é obrigatório")]
         [Display(Name = "Contato")]
         public int Mobileno {get; set;} // mobileno = mobile number
 
@@ -44,7 +45,7 @@ namespace Projetinho.Models
             Mobileno = mobileno;
         }
 
-        /*public override string ToString() {
+        public override string ToString() {
             return "Nome da Livraria: " + Name + "\nEndereco: " + Address + "\nContato: " + Mobileno;
         }
 
@@ -57,7 +58,7 @@ namespace Projetinho.Models
 
         // issue books = emprestar livros
         public void Issuebooks(string bookname, Member member) {
-            Books? book = Searchbk(bookname);
+            GeneralBook? book = (GeneralBook?)Searchbk(bookname);
 
             if(book == null) {
                 Console.WriteLine("Livro nao encontrado");
@@ -65,7 +66,7 @@ namespace Projetinho.Models
 
             if (book.Bookquantity > 0) {
                 book.Bookquantity--;
-                member.Books.Add(book);
+                member.GeneralBooks.Add(book);
             }
             Console.WriteLine("Livro nao disponivel");
         }
@@ -88,11 +89,11 @@ namespace Projetinho.Models
 
         // return bk = devolver livro
         public void Returnbk(Books book, Member member) {
-            if (member.Books.Contains(book)) {
+            if (member.GeneralBooks.Contains(book)) {
                 book.Bookquantity++;
-                member.Books.Remove(book);
+                member.GeneralBooks.Remove((GeneralBook)book);
             }
             Console.WriteLine("Livro nao encontrado");
-        }*/
+        }
     }
 }
