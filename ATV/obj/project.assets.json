@@ -9486,11 +9486,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/aluno/Área de Trabalho/ATV/ATV.csproj",
+      "projectUniqueName": "/home/aluno/Área de Trabalho/Analise-e-Projeto-de-Sistemas/ATV/ATV.csproj",
       "projectName": "ATV",
-      "projectPath": "/home/aluno/Área de Trabalho/ATV/ATV.csproj",
+      "projectPath": "/home/aluno/Área de Trabalho/Analise-e-Projeto-de-Sistemas/ATV/ATV.csproj",
       "packagesPath": "/home/aluno/.nuget/packages/",
-      "outputPath": "/home/aluno/Área de Trabalho/ATV/obj/",
+      "outputPath": "/home/aluno/Área de Trabalho/Analise-e-Projeto-de-Sistemas/ATV/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/aluno/.nuget/NuGet/NuGet.Config"

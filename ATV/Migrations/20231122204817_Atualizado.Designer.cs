@@ -3,6 +3,7 @@ using System;
 using ATV.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ATV.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231122204817_Atualizado")]
+    partial class Atualizado
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,7 +37,8 @@ namespace ATV.Migrations
 
                     b.HasIndex("ProdutoId");
 
-                    b.HasIndex("UsuarioId");
+                    b.HasIndex("UsuarioId")
+                        .IsUnique();
 
                     b.ToTable("Carrinho");
                 });
@@ -115,8 +118,8 @@ namespace ATV.Migrations
                         .HasForeignKey("ProdutoId");
 
                     b.HasOne("ATV.Models.Usuario", "Usuario")
-                        .WithMany()
-                        .HasForeignKey("UsuarioId")
+                        .WithOne("Carrinho")
+                        .HasForeignKey("ATV.Models.Carrinho", "UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -142,6 +145,12 @@ namespace ATV.Migrations
             modelBuilder.Entity("ATV.Models.Produto", b =>
                 {
                     b.Navigation("Carrinho");
+                });
+
+            modelBuilder.Entity("ATV.Models.Usuario", b =>
+                {
+                    b.Navigation("Carrinho")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

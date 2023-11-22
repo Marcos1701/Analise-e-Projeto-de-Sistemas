@@ -10,11 +10,19 @@ namespace ATV.Models
     {
         public int Id { get; set; }
         
+        [Required(ErrorMessage = "Informe a descrição do produto", AllowEmptyStrings = false)]
         public string Descricao { get; set; }
 
+        [Display(Name = "Endereço da Imagem")]
+        [Required(ErrorMessage = "Informe a senha do usuário", AllowEmptyStrings = false)]
         public string PathImagem { get; set; }
         
         public int Quantidade { get; set; }
+
+        [Display(Name = "Preço")]
+        public decimal Preco { get; set; }
+
+        [Required(ErrorMessage = "Selecione a Categoria do Produto")]
         public int CategoriaId { get; set; }
 
         [Required(ErrorMessage = "O Produto deve possuir uma Categoria!")]
